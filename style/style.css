@@ -1,3 +1,361 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    max-width: 1400px;
+    margin: 48px 48px 0 48px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+nav img {
+    max-height: 19px;
+    width: auto;
+}
+
+#lien-hebergements-activites {
+    margin: 0px 7px 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.lien-nav {
+    font-size: 1em;
+    padding: 46px 22px 0 22px;
+}
+
+.lien-nav:hover {
+    color: #0065FC;
+    font-weight: 500;
+    border-top: 3px solid #0065FC;
+}
+
+#conteneur1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 h1 {
-    color: red;
- }
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+#barre-recherche-ville {
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    margin-top: 3px;
+    margin-bottom: 11px;
+}
+
+.fa-solid.fa-location-dot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    border-radius: 15px 0 0 15px;
+    height: 49px;
+    width: 50px;
+}
+
+input {
+    width: 235px;
+    border: 1px solid #F2F2F2;
+    font-weight: 700;
+    height: 49px;
+}
+
+i.fa-solid.fa-magnifying-glass {
+    display: none;
+}
+
+button {
+    background: #0065FC;
+    color: white;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    width: 117px;
+    font-weight: 700;
+    height: 49px;
+}
+
+#lien-filtres {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+#filtres {
+    margin-left: 7px;
+    gap: 25px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    gap: 38px;
+    margin-left: 50px;
+}
+
+#lien-filtres a {
+    display: flex;
+}
+
+#lien-filtres li {
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+    padding: 10px 15px;
+    height: min-content;
+}
+
+#lien-filtres li:hover {
+    background-color: #DEEBFF;
+}
+
+#lien-filtres .fa-solid,
+.fa-solid.fa-info,
+.fa-solid.fa-star.star-bleu,
+.fa-solid.fa-chart-line {
+    color: #0065FC;
+}
+
+#lien-filtres .fa-solid {
+    margin-right: 6px;
+}
+
+.fa-solid.fa-star.star-grey {
+    color: #F2F2F2;
+}
+
+p i.fa-solid.fa-info {
+    font-size: 0.6em;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #D9D9D9;
+    border-radius: 100%;
+    margin: 20px 10px 18px 3px;
+}
+
+#hebergements {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#hebergements-marseille {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    width: 67%;
+    height: 626px;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+
+#hebergements-marseille h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 37px 0 0 28px;
+}
+
+#hebergements-marseille article {
+    width: 29%;
+    height: 32%;
+    border-radius: 20px;
+    background: #FFFFFF;
+    padding: 0 0 0 0;
+    box-shadow: 0px 3px 10px 2px rgb( 0, 0, 0, 0.1);
+}
+
+#hebergements-marseille img {
+    width: 100%;
+    height: 124px;
+    border-radius: 20px 20px 0 0;
+    border: 5px solid white;
+}
+
+.conteneur {
+    margin-left: 10px;
+}
+
+#hebergements-marseille h3, #hebergements-plus-populaires h3, #activites h3 {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 4px 5px;
+}
+
+#hebergements-marseille p,#hebergements-plus-populaires p {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 4px 5px;
+}
+
+.notation {
+    margin: 4px 0 7px 5px;
+}
+
+#afficher-plus {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 29px;
+    padding: 5px;
+}
+
+#hebergements-plus-populaires {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    row-gap: 30px;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 626px;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+
+#hebergements-plus-populaires h2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 100%;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 0 0 0 0;
+}
+
+.fa-solid.fa-chart-line {
+    font-size: 0.7em;
+    margin-top: 4px;
+}
+
+#hebergements-plus-populaires article {
+    width: 85%;
+    height: 23%;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 3px 10px 2px rgb( 0, 0, 0, 0.1);
+}
+
+#hebergements-plus-populaires a {
+    display: flex;
+}
+
+#hebergements-plus-populaires img {
+    width: 39%;
+    height: 144px;
+    border-radius: 20px 0 0 20px;
+    border: 5px solid white;
+}
+
+.conteneur-populaires {
+    align-content: space-between;
+    width: 55%;
+    margin-top: 5px;
+}
+
+#hebergements-plus-populaires p {
+    margin-top: 2px;
+}
+
+.notation-pop {
+    margin: 48px 0 6px 5px;
+}
+
+#notation-bleu-blanc {
+    margin: 67px 0 6px 5px;
+}
+
+#activites {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 20px 0 60px 0;
+}
+
+#activites h2 {
+    width: 100%;
+    font-weight: 700;
+    font-size: 22px;
+    margin: 25px 0 25px 15px;
+    padding: 5px;
+
+}
+
+#activites div {
+    width: 23%;
+    height: 445px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 15px 1px rgb( 0, 0, 0, 0.1);
+}
+
+#activites img {
+    width: 100%;
+    height: 389px;
+    border-radius: 20px 20px 0 0;
+}
+
+#activites h3 {
+    padding: 11px 0 0 11px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background: #F2F2F2;
+    
+}
+
+footer div {
+    padding: 25px 90px 35px 85px;
+}
+
+footer h4 {
+    height: 15px;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+footer li {
+    height: 0.2em;
+}
