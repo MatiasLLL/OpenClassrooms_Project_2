@@ -9,6 +9,10 @@ body {
     margin: 48px 48px 0 48px;
 }
 
+img {
+    object-fit: cover;
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -41,7 +45,7 @@ a {
     border-top: 3px solid #0065FC;
 }
 
-#conteneur1 {
+#conteneur-header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -103,7 +107,6 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    column-gap: 1px;
     font-weight: 700;
 }
 
@@ -192,7 +195,6 @@ p i.fa-solid.fa-info {
     height: 32%;
     border-radius: 20px;
     background: #FFFFFF;
-    padding: 0 0 0 0;
     box-shadow: 0px 3px 10px 2px rgb(0, 0, 0, 0.1);
 }
 
@@ -200,26 +202,29 @@ p i.fa-solid.fa-info {
     width: 100%;
     height: 124px;
     border-radius: 20px 20px 0 0;
-    border: 5px solid white;
+    padding: 4px;
 }
 
-.conteneur {
-    margin-left: 10px;
+.conteneur-hebergement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 35%;
+    padding-left: 8px;
 }
 
-#hebergements-marseille h3,
-#hebergements-plus-populaires h3,
-#activites h3 {
+#hebergements-marseille h3 {
     font-weight: 700;
     font-size: 16px;
-    margin: 4px 5px;
+    margin-left: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-#hebergements-marseille p,
-#hebergements-plus-populaires p {
+#hebergements-marseille p {
     font-weight: 400;
     font-size: 14px;
-    margin: 4px 5px;
+    margin: 2px 0 2px 5px;
 }
 
 .notation {
@@ -251,12 +256,11 @@ p i.fa-solid.fa-info {
 
 #hebergements-plus-populaires h2 {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-around;
     width: 100%;
     font-weight: 700;
     font-size: 22px;
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
 .fa-solid.fa-chart-line {
@@ -270,35 +274,39 @@ p i.fa-solid.fa-info {
     border-radius: 20px;
     background: #FFFFFF;
     box-shadow: 0px 3px 10px 2px rgb(0, 0, 0, 0.1);
+    padding: 4px;
+}
+
+#hebergements-plus-populaires h3 {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0;
+}
+
+#hebergements-plus-populaires p {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    margin-top: 2px;
 }
 
 #hebergements-plus-populaires a {
     display: flex;
+    height: 100%;
 }
 
 #hebergements-plus-populaires img {
     width: 39%;
-    height: 144px;
-    border-radius: 20px 0 0 20px;
-    border: 5px solid white;
+    height: 100%;
+    border-radius: 16px 0 0 16px;
 }
 
 .conteneur-populaires {
-    align-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 55%;
-    margin-top: 5px;
-}
-
-#hebergements-plus-populaires p {
-    margin-top: 2px;
-}
-
-.notation-pop {
-    margin: 48px 0 0 5px;
-}
-
-#notation-bleu-blanc {
-    margin: 68px 0 0px 5px;
+    padding-left: 5px;
 }
 
 #activites {
@@ -333,8 +341,16 @@ p i.fa-solid.fa-info {
     border-radius: 20px 20px 0 0;
 }
 
+.titre-photo {
+    display: inline;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 #activites h3 {
-    padding: 11px 0 0 11px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 9px 0 9px 20px;
 }
 
 footer {
@@ -344,7 +360,7 @@ footer {
 }
 
 footer div {
-    padding: 25px 90px 35px 85px;
+    padding: 25px 45px 35px 85px;
 }
 
 footer h4 {
@@ -365,9 +381,18 @@ footer li {
 
 /*Media Queries Tablette*/
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    #filtres, #lien-filtres li {
-        column-gap: 15px;
+@media screen and (max-width: 992px) {
+    #lien-filtres {
+        flex-wrap: wrap;
+    }
+
+    #filtres {
+        padding: 0;
+    }
+
+    #lien-filtres ul {
+        column-gap: 8px;
+        padding-left: 5px;
     }
 
     #hebergements {
@@ -398,11 +423,7 @@ footer li {
     }
 
     .notation-pop {
-        margin-top: 31px;
-    }
-
-    #notation-bleu-blanc {
-        margin-top: 51px;
+        font-size: 0.9em;
     }
 
     #activites div {
@@ -416,15 +437,17 @@ footer li {
     }
 
     #activites h3 {
-        padding: 1px 0 35px 11px;
+        margin: 7px 0 5px 11px;
     }
-    
+
+    footer {
+        padding: 2px 0 4px 0;
+    }
+
     footer div {
-        padding: 25px 60px 35px 55px;
+        padding: 25px 25px 35px 45px;
     }
 }
-
-
 
 /*Media Queries Mobile*/
 
@@ -432,6 +455,7 @@ footer li {
     body {
         margin: 33px 0 0 0;
     }
+
     header nav {
         flex-direction: column;
         align-items: center;
@@ -449,32 +473,29 @@ footer li {
         width: 100%;
         margin: 0 0 0 0;
     }
-    
+
     .lien-nav {
         width: 100%;
         display: flex;
         justify-content: center;
         padding: 0 0 25px 0;
     }
-    
+
     .lien-nav:hover {
-        width: ;
         border-top: none;
         border-bottom: 4px solid #0065FC;
     }
 
-    #conteneur1 {
-        margin: 0 33px 0 33px;
+    #conteneur-header {
+        margin: 5px 13px 15px 13px;
     }
 
+
     #barre-recherche-ville {
-        display: flex;
-        flex-direction: row;
-        font-weight: 700;
-        margin-top: 3px;
-        margin-bottom: 11px;
+        margin-left: 6px;
+        width: 100%;
     }
-    
+
     .fa-solid.fa-location-dot {
         display: flex;
         justify-content: center;
@@ -484,21 +505,26 @@ footer li {
         height: 49px;
         width: 50px;
     }
-    
+
     input {
         width: 235px;
         border: 1px solid #F2F2F2;
         font-weight: 700;
         height: 49px;
     }
-    
+
     i.fa-solid.fa-magnifying-glass {
         display: contents;
+        font-size: 1.2em;
     }
-    
+
     button {
         color: white;
-        width: 13%;
+        width: 50px;
+    }
+
+    button span {
+        display: none;
     }
 
     #lien-filtres {
@@ -507,12 +533,12 @@ footer li {
         column-gap: 1px;
         font-weight: 700;
     }
-    
+
     #filtres {
         width: 100%;
         margin: 20px 0 5px 8px;
     }
-    
+
     ul {
         width: 100%;
         flex-wrap: wrap;
@@ -521,18 +547,23 @@ footer li {
         list-style-type: none;
         column-gap: 43px;
     }
-    
+
     #lien-filtres a {
         display: flex;
         margin: 10px 0 10px 0;
     }
-    
+
     #lien-filtres li {
         border: 2px solid #D9D9D9;
         border-radius: 40px;
-        padding: 10px 15px;
-        width: 45%;
-        height: 10%;
+        padding: 6px 13px;
+        width: 47%;
+        height: 7%;
+        font-size: 0.7em;
+    }
+
+    #lien-filtres .fa-solid {
+        font-size: 1.5em;
     }
 
     #hebergements {
@@ -547,14 +578,14 @@ footer li {
     }
 
     #hebergements-marseille h2 {
-        margin: 37px 0 2px 60px;
+        margin: 37px 0 6px 7%;
     }
 
     #hebergements-marseille article {
         width: 85%;
     }
 
-    #hebergements-marseille img{
+    #hebergements-marseille img {
         height: 170px;
     }
 
@@ -564,18 +595,25 @@ footer li {
 
     #hebergements-plus-populaires {
         width: 100%;
-        row-gap: 29px; 
-        height: 626px;
+        row-gap: 29px;
+        height: auto;
         border-radius: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     #hebergements-plus-populaires h2 {
         justify-content: space-between;
-        margin: 0 50px 0 50px;
+        margin: 0 8% 0 8%;
+    }
+
+    #hebergements-plus-populaires img {
+        height: 151px;
     }
 
     #hebergements-plus-populaires article {
         width: 85%;
+        height: initial;
     }
 
     .conteneur-populaires {
@@ -586,19 +624,16 @@ footer li {
         margin-top: 69px;
     }
 
-    #notation-bleu-blanc {
-        margin-top: 69px;
-    }
-
     #activites {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
         row-gap: 25px;
+        padding-bottom: 25px;
     }
 
     #activites h2 {
-        margin: 37px 0 10px 50px;
+        margin: 37px 0 10px 7%;
     }
 
     #activites div {
@@ -614,10 +649,11 @@ footer li {
     #activites h3 {
         padding: 9px 0 12px 13px;
     }
-    
+
     footer {
         flex-direction: column;
         padding-top: 20px;
+        padding-bottom: 53px;
     }
 
     footer div {
@@ -628,8 +664,8 @@ footer li {
         height: 15px;
         padding-top: 0;
     }
+
     footer li {
         height: 0.8em;
     }
 }
-    
