@@ -86,6 +86,8 @@ input {
     border: 1px solid #F2F2F2;
     font-weight: 700;
     height: 49px;
+    font-size: 1em;
+    padding-left: 11px;
 }
 
 i.fa-solid.fa-magnifying-glass {
@@ -99,6 +101,7 @@ button {
     border: none;
     width: 117px;
     font-weight: 700;
+    font-size: 1em;
     height: 49px;
 }
 
@@ -306,7 +309,7 @@ p i.fa-solid.fa-info {
     flex-direction: column;
     justify-content: space-between;
     width: 55%;
-    padding-left: 5px;
+    padding: 7px 0 5px 12px;
 }
 
 #activites {
@@ -405,6 +408,19 @@ footer li {
         margin-bottom: 5%;
     }
 
+    #hebergements-marseille h3, #hebergements-plus-populaires h3 {
+        font-size: 0.87em;
+    }
+
+    #hebergements-marseille p, #hebergements-plus-populaires p {
+        font-size: 0.65em;
+        padding-top: 3px;
+    }
+
+    .notation, .notation-pop {
+        font-size: 0.9em;
+    }
+
     #hebergements-plus-populaires {
         justify-content: center;
         column-gap: 21px;
@@ -419,11 +435,11 @@ footer li {
 
     #hebergements-plus-populaires article {
         width: 29%;
-        height: 52%;
+        height: 55%;
     }
 
-    .notation-pop {
-        font-size: 0.9em;
+    .conteneur-populaires {
+        padding-left: 10px;
     }
 
     #activites div {
@@ -566,6 +582,10 @@ footer li {
         font-size: 1.5em;
     }
 
+    p i.fa-solid.fa-info {
+        font-size: 0.75em;
+    }
+
     #hebergements {
         flex-direction: column-reverse;
     }
@@ -589,6 +609,14 @@ footer li {
         height: 170px;
     }
 
+    #hebergements-marseille h3, #hebergements-plus-populaires h3 {
+        font-size: 1em;
+    }
+
+    #hebergements-marseille p, #hebergements-plus-populaires p {
+        font-size: 1em;
+    }
+
     #afficher-plus {
         display: none;
     }
@@ -607,17 +635,16 @@ footer li {
         margin: 0 8% 0 8%;
     }
 
-    #hebergements-plus-populaires img {
-        height: 151px;
-    }
-
     #hebergements-plus-populaires article {
         width: 85%;
-        height: initial;
     }
 
     .conteneur-populaires {
         margin: 4px;
+    }
+
+    #hebergements-plus-populaires img {
+        height: 188px;
     }
 
     .notation-pop {
